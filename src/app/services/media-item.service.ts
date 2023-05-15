@@ -14,6 +14,20 @@ export class MediaItemService {
       category: 'Comedy',
       isFavorite: false,
     },
+
+    {
+      name: 'Avathar',
+      year: 1050012200000,
+      category: 'Fantasy',
+      isFavorite: false,
+    },
+
+    {
+      name: 'Harry Potter',
+      year: 1050012200000,
+      category: 'Fantasy',
+      isFavorite: true,
+    },
   ];
 
   get() {

@@ -8,7 +8,8 @@
     </p>
   </header>
   <div>List of categories: {{ mediaItems | categoryList }}</div>
-  <media-item [mediaItem]="mediaItems[0]"></media-item>
 
-  <media-item [mediaItem]="mediaItems[1]"></media-item>
+  <media-item *ngFor="let mi of mediaItems" [mediaItem]="mi"></media-item>
+
+  <!-- <media-item [mediaItem]="mediaItems[1]"></media-item> -->
 </section>
