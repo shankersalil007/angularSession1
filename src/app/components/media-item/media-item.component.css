@@ -2,3 +2,11 @@
   border: 3px solid black;
   padding: 5px;
 }
+
+.is-favorite {
+  color: red;
+}
+
+.is-hover {
+  color: blue;
+}

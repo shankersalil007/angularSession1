@@ -1,12 +1,13 @@
 <div class="outer">
-  <h1>{{ name }}</h1>
+  <h1>{{ mediaItem.name }}</h1>
   <!-- interpolation -->
-  <div [textContent]="category"></div>
+  <div [textContent]="mediaItem.category"></div>
   <!-- binding -->
-  <div textContent="{{ year }}"></div>
+  <div textContent="{{ mediaItem.year }}"></div>
   <!-- binding -->
   <div>
     <svg
+      [mwFavorite]="mediaItem.isFavorite"
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="16"

@@ -6,10 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./media-item.component.css'],
 })
 export class MediaItemComponent {
-  @Input() name = 'The Redumption';
-  @Input() category = 'Action';
-  @Input() year = '2016';
-
+  @Input() mediaItem: MediaItem;
   onRemove() {
     alert('deleted');
   }
