@@ -12,13 +12,13 @@ export class AppComponent implements OnInit {
     this.mediaItems = [
       {
         name: 'Twenty Twenty',
-        year: '2008',
+        year: 1210012200000,
         category: 'MultiStar',
         isFavorite: true,
       },
       {
         name: 'CID Moosa',
-        year: '2003',
+        year: 1050012200000,
         category: 'Comedy',
         isFavorite: false,
       },

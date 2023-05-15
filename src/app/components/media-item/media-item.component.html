@@ -3,7 +3,7 @@
   <!-- interpolation -->
   <div [textContent]="mediaItem.category"></div>
   <!-- binding -->
-  <div textContent="{{ mediaItem.year }}"></div>
+  <div textContent="{{ mediaItem.year | date : 'yyyy' }}"></div>
   <!-- binding -->
   <div>
     <svg

@@ -1,6 +1,6 @@
 export interface MediaItem {
   name: string;
   category: string;
-  year: string;
+  year: number;
   isFavorite: boolean;
 }
