@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaItem } from './models/media-item.model';
+import { MediaItemService } from './services/media-item.service';
 
 @Component({
   selector: 'app-root',
@@ -8,21 +9,8 @@ import { MediaItem } from './models/media-item.model';
 })
 export class AppComponent implements OnInit {
   mediaItems: MediaItem[];
+  constructor(private mediaItemService: MediaItemService) {}
   ngOnInit(): void {
-    this.mediaItems = [
-      {
-        name: 'Twenty Twenty',
-        year: 1210012200000,
-        category: 'MultiStar',
-        isFavorite: true,
-      },
-      {
-        name: 'CID Moosa',
-        year: 1050012200000,
-        category: 'Comedy',
-        isFavorite: false,
-      },
-    ];
+    this.mediaItems = this.mediaItemService.get();
   }
-  title = 'first-app';
 }
