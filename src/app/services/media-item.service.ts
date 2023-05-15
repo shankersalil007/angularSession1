@@ -14,14 +14,12 @@ export class MediaItemService {
       category: 'Comedy',
       isFavorite: false,
     },
-
     {
       name: 'Avathar',
       year: 1050012200000,
       category: 'Fantasy',
       isFavorite: false,
     },
-
     {
       name: 'Harry Potter',
       year: 1050012200000,
@@ -42,6 +40,13 @@ export class MediaItemService {
     const index = this.mediaItems.indexOf(mediaItem);
     if (index > -1) {
       this.mediaItems.splice(index, 1);
+    }
+  }
+
+  toggleFav(mediaItem: MediaItem) {
+    const index = this.mediaItems.indexOf(mediaItem);
+    if (index > -1) {
+      this.mediaItems[index].isFavorite = !this.mediaItems[index].isFavorite;
     }
   }
 }

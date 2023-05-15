@@ -9,7 +9,12 @@
   </header>
   <div>List of categories: {{ mediaItems | categoryList }}</div>
 
-  <media-item *ngFor="let mi of mediaItems" [mediaItem]="mi"></media-item>
+  <media-item
+    *ngFor="let mi of mediaItems"
+    [mediaItem]="mi"
+    (ssRemoveMediaItem)="onRemove($event)"
+    (ssToggleFav)="onSSToggleFav($event)"
+  ></media-item>
 
   <!-- <media-item [mediaItem]="mediaItems[1]"></media-item> -->
 </section>

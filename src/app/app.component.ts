@@ -13,4 +13,12 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.mediaItems = this.mediaItemService.get();
   }
+
+  onRemove(mediaItem: MediaItem) {
+    this.mediaItemService.delete(mediaItem);
+  }
+
+  onSSToggleFav(mediaItem: MediaItem) {
+    this.mediaItemService.toggleFav(mediaItem);
+  }
 }

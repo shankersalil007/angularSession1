@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MediaItem } from '../../models/media-item.model';
+import { MediaItemService } from 'src/app/services/media-item.service';
 
 @Component({
   selector: 'media-item',
@@ -7,7 +9,15 @@ import { Component, Input } from '@angular/core';
 })
 export class MediaItemComponent {
   @Input() mediaItem: MediaItem;
-  onRemove() {
-    alert('deleted');
+
+  @Output() ssRemoveMediaItem = new EventEmitter<MediaItem>();
+  @Output() ssToggleFav = new EventEmitter<MediaItem>();
+
+  onRemove(mediaItem: MediaItem) {
+    this.ssRemoveMediaItem.emit(mediaItem);
+  }
+
+  onToggleFav(mediaItem: MediaItem) {
+    this.ssToggleFav.emit(mediaItem);
   }
 }
