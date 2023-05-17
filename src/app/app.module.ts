@@ -7,6 +7,7 @@ import { MediaItemComponent } from './components/media-item/media-item.component
 import { FavoriteDirective } from './directives/favorite.directive';
 import { CategoryListPipe } from './pipes/category-list.pipe';
 import { MediaItemService } from './services/media-item.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { MediaItemService } from './services/media-item.service';
     FavoriteDirective,
     CategoryListPipe,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [MediaItemService],
   bootstrap: [AppComponent],
 })

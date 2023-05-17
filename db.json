@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "mediaItems": [
+    {
+      "id": 1,
+      "name": "Twenty Twenty",
+      "year": 1210012200000,
+      "category": "MultiStar",
+      "isFavorite": true
+    },
+    {
+      "id": 2,
+      "name": "CID Moosa",
+      "year": 1050012200000,
+      "category": "Comedy",
+      "isFavorite": true
+    },
+    {
+      "id": 3,
+      "name": "Avathar",
+      "year": 1050012200000,
+      "category": "Fantasy",
+      "isFavorite": true
+    },
+    {
+      "id": 4,
+      "name": "Harry Potter",
+      "year": 1050012200000,
+      "category": "Fantasy",
+      "isFavorite": true
+    }
+  ]
+}

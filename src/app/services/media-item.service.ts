@@ -1,32 +1,29 @@
+import { Injectable } from '@angular/core';
 import { MediaItem } from '../models/media-item.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
+@Injectable({
+  providedIn: 'root',
+})
 export class MediaItemService {
-  mediaItems: MediaItem[] = [
-    {
-      name: 'Twenty Twenty',
-      year: 1210012200000,
-      category: 'MultiStar',
-      isFavorite: true,
-    },
-    {
-      name: 'CID Moosa',
-      year: 1050012200000,
-      category: 'Comedy',
-      isFavorite: false,
-    },
-    {
-      name: 'Avathar',
-      year: 1050012200000,
-      category: 'Fantasy',
-      isFavorite: false,
-    },
-    {
-      name: 'Harry Potter',
-      year: 1050012200000,
-      category: 'Fantasy',
-      isFavorite: true,
-    },
-  ];
+  mediaItems: MediaItem[] = [];
+
+  url = 'http://localhost:3000/mediaitems';
+
+  constructor(private httpClient: HttpClient) {}
+
+  fetchMediaItemsFromServer(): Observable<MediaItem[]> {
+    return this.httpClient.get<MediaItem[]>(this.url);
+  }
+
+  removeMediaItemsFromServer(mediaItem: MediaItem) {
+    return this.httpClient.delete(this.url + '/' + mediaItem.id);
+  }
+
+  updateMediaItemsFromServer(mediaItem: MediaItem) {
+    return this.httpClient.put(this.url + '/' + mediaItem.id, mediaItem);
+  }
 
   get() {
     return this.mediaItems;
