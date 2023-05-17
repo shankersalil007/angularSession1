@@ -1,0 +1,27 @@
+.outer-container {
+  display: flex;
+}
+
+.navigator {
+  background-color: violet;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100vh;
+  margin-right: 10px;
+}
+
+.n-button {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  background-color: aqua;
+  border: 0px;
+}
+
+.n-button:hover {
+  background-color: blue;
+}

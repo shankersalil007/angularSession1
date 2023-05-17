@@ -1,0 +1,7 @@
+<div class="input"><span>name</span><input #name /></div>
+<div class="input"><span>category</span><input #category /></div>
+<div class="input"><span>date</span><input type="date" #date /></div>
+<br />
+<button (click)="onSubmit(name.value, category.value, date.value)">
+  submit
+</button>

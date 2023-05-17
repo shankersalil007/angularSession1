@@ -25,6 +25,10 @@ export class MediaItemService {
     return this.httpClient.put(this.url + '/' + mediaItem.id, mediaItem);
   }
 
+  addMedaiItemToServer(mediaItem: MediaItem) {
+    return this.httpClient.post(this.url, mediaItem);
+  }
+
   get() {
     return this.mediaItems;
   }

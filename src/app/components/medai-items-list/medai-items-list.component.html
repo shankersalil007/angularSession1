@@ -1,0 +1,6 @@
+<media-item
+  *ngFor="let mi of mediaItems"
+  [mediaItem]="mi"
+  (ssRemoveMediaItem)="onRemove($event)"
+  (ssToggleFav)="onSSToggleFav($event)"
+></media-item>
