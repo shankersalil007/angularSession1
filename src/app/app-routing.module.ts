@@ -9,6 +9,11 @@ const routes: Routes = [
     path: 'add',
     component: AddMediaItemComponent,
   },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'mediaItems',
+  },
 ];
 
 @NgModule({
